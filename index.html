@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <meta name="description" content="A modern, responsive image gallery with filtering, lightbox, and navigation features." />
+  <meta name="keywords" content="Image Gallery, Responsive, Lightbox, HTML CSS JavaScript" />
+  <meta name="author" content="Your Name" />
+
+  <title>Responsive Image Gallery</title>
+  
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <h1 class="main-title">Image Gallery</h1>
+      <p class="tagline">Filter by category and click to view in full-screen lightbox.</p>
+    </div>
+  </header>
+
+  <nav class="filter-nav container" aria-label="Filter Categories">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="nature">Nature</button>
+    <button class="filter-btn" data-filter="city">City</button>
+  </nav>
+
+ <main class="gallery container">
+  <div class="gallery-item" data-category="nature">
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Sunlit forest" loading="lazy" />
+  </div>
+  <div class="gallery-item" data-category="city">
+    <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad" alt="Dubai skyline at sunset" loading="lazy" />
+  </div>
+  <div class="gallery-item" data-category="nature">
+    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Snowy mountain landscape" loading="lazy" />
+  </div>
+  <div class="gallery-item" data-category="city">
+    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8" alt="City night view" loading="lazy" />
+  </div>
+</main>
+
+
+  <!-- Lightbox -->
+  <div class="lightbox" aria-hidden="true">
+    <span class="close" aria-label="Close">&times;</span>
+    <img class="lightbox-image" src="" alt="Expanded view" />
+    <span class="nav prev" aria-label="Previous">&#10094;</span>
+    <span class="nav next" aria-label="Next">&#10095;</span>
+  </div>
+
+  <script src="script.js" defer></script>
+
+</body>
+</html>
